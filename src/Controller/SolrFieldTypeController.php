@@ -73,7 +73,7 @@ class SolrFieldTypeController extends ControllerBase {
     }
     catch (ZipStreamException $e) {
       watchdog_exception('search_api_solr_multilingual', $e);
-      drupal_set_message($this->t('An error occured during the creation of the config.zip. Look at the logs for details.'), 'error');
+      $this->messenger()->addError($this->t('An error occured during the creation of the config.zip. Look at the logs for details.'));
     }
 
     return [];

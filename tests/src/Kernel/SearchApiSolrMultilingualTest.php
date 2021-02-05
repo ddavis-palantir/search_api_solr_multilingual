@@ -56,7 +56,7 @@ class SearchApiSolrMultilingualTest extends SearchApiSolrTest {
     $this->installEntitySchema('user');
     $this->installConfig(['search_api_solr', 'search_api_solr_multilingual', 'search_api_solr_multilingual_test']);
 
-    $this->logger = $this->getMock('Psr\Log\LoggerInterface');
+    $this->logger = $this->createMock('Psr\Log\LoggerInterface');
     $this->logger->method('log')->willThrowException(new \Exception('logger triggered'));
     \Drupal::getContainer()->get('logger.factory')->addLogger($this->logger);
 

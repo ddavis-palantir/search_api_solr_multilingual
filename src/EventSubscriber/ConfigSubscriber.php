@@ -54,8 +54,8 @@ class ConfigSubscriber implements EventSubscriberInterface {
       $this->configInstaller->installOptionalConfig(NULL, $restrict_by_dependency);
     }
 
-    // drupal_set_message($saved_config->getName());
-    // drupal_set_message(print_r($saved_config->getRawData(), TRUE));.
+    // $this->messenger()->addStatus($saved_config->getName());
+    // $this->messenger()->addStatus(print_r($saved_config->getRawData(), TRUE));.
   }
 
 }

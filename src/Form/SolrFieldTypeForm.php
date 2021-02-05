@@ -82,12 +82,12 @@ class SolrFieldTypeForm extends EntityForm {
     $status = $solr_field_type->save();
 
     if ($status) {
-      drupal_set_message($this->t('Saved the %label Solr Field Type.', array(
+      $this->messenger()->addStatus($this->t('Saved the %label Solr Field Type.', array(
         '%label' => $solr_field_type->label(),
       )));
     }
     else {
-      drupal_set_message($this->t('The %label Solr Field Type was not saved.', array(
+      $this->messenger()->addStatus($this->t('The %label Solr Field Type was not saved.', array(
         '%label' => $solr_field_type->label(),
       )));
     }

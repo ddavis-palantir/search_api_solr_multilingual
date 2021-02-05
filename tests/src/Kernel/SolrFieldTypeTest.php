@@ -2,7 +2,7 @@
 
 namespace Drupal\Tests\search_api_solr_multilingual\Kernel;
 
-use Drupal\config\Tests\SchemaCheckTestTrait;
+use Drupal\Tests\SchemaCheckTestTrait;
 use Drupal\config_test\TestInstallStorage;
 use Drupal\Core\Config\InstallStorage;
 use Drupal\Core\Config\TypedConfigManager;
@@ -46,7 +46,7 @@ class SolrFieldTypeTest extends KernelTestBase {
   public function setUp() {
     parent::setUp();
 
-    $this->configNames = array_keys(file_scan_directory(drupal_get_path('module', 'search_api_solr_multilingual') . '/config', '/search_api_solr_multilingual.solr_field_type.text_/', ['key' => 'name']));
+    $this->configNames = array_keys(\Drupal::service('file_system')->scanDirectory(drupal_get_path('module', 'search_api_solr_multilingual') . '/config', '/search_api_solr_multilingual.solr_field_type.text_/', ['key' => 'name']));
 
     foreach ($this->configNames as $config_name) {
       preg_match('/search_api_solr_multilingual.solr_field_type.text_(.*)_\d+_\d+_\d+/', $config_name, $matches);

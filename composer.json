@@ -5,6 +5,11 @@
   "license": "GPL-2.0+",
   "require": {
     "maennchen/zipstream-php": "0.4.*",
-    "drupal/search_api_solr": "~1.2"
+    "drupal/search_api_solr": "^1.8"
+  },
+  "extra": {
+    "branch-alias": {
+      "dev-8.x-1.x": "1.x-dev"
+    }
   }
 }
