@@ -1,8 +1,8 @@
-name: search_api_solr_multilingual
 type: module
-description: Search API Multilingual Solr Search.
-core_version_requirement: ^8.8 || ^9
+name: Search API Solr Multilingual
+description: 'Support Multilingual search within Search API Solr'
+core_version_requirement: ^8.9 || ^9
 package: Search
 dependencies:
-  - language
-  - search_api_solr
+  - drupal:language
+  - search_api_solr:search_api_solr

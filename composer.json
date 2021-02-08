@@ -2,7 +2,7 @@
   "name": "drupal/search_api_solr_multilingual",
   "description": "Offers an implementation of the Search API that uses an Apache Solr server for indexing content.",
   "type": "drupal-module",
-  "license": "GPL-2.0+",
+  "license": "GPL-2.0-or-later",
   "require": {
     "maennchen/zipstream-php": "0.4.*",
     "drupal/search_api_solr": "^1.8"

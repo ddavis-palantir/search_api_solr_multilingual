@@ -1,10 +1,10 @@
 type: module
-name: 'Search API Test Solr Multilingual search'
+name: Search API Test Solr Multilingual Search
 description: 'Support module for Search API Solr Multilingual search tests.'
 package: 'Search API'
 dependencies:
   - drupal:language
   - search_api:search_api_test_example_content
   - search_api_solr_multilingual:search_api_solr_multilingual
-core_version_requirement: ^8.8 || ^9
+core_version_requirement: ^8.9 || ^9
 hidden: true

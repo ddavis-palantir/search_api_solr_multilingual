@@ -30,6 +30,16 @@ use Drupal\search_api_solr_multilingual\Utility\Utility;
  *     "label" = "label",
  *     "uuid" = "uuid"
  *   },
+ *   config_export = {
+ *     "id",
+ *     "label",
+ *     "managed_schema",
+ *     "minimum_solr_version",
+ *     "field_type_language_code",
+ *     "domains",
+ *     "field_type",
+ *     "text_files",
+ *   },
  *   links = {
  *     "edit-form" = "/admin/config/search/search-api/solr_field_type/{solr_field_type}",
  *     "delete-form" = "/admin/config/search/search-api/solr_field_type/{solr_field_type}/delete",
