@@ -69,7 +69,7 @@ function search_api_solr_multilingual_requirements($phase) {
  *   name.
  */
 function search_api_solr_multilingual_update_helper_get_backend_configs() {
-  module_load_install('search_api_solr');
+  \Drupal::moduleHandler()->loadInclude('search_api_solr', 'install');
   return search_api_solr_update_helper_get_backend_configs('search_api_solr_multilingual');
 }
 
@@ -81,7 +81,7 @@ function search_api_solr_multilingual_update_helper_get_backend_configs() {
  * @param bool $trusted_data
  */
 function search_api_solr_multilingual_update_helper_save_backend_config($server_name, array $backend_config, $trusted_data = TRUE) {
-  module_load_install('search_api_solr');
+  \Drupal::moduleHandler()->loadInclude('search_api_solr', 'install');
   search_api_solr_update_helper_save_backend_config($server_name, $backend_config, $trusted_data);
 }
 
